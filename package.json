@@ -1,0 +1,12 @@
+{
+  "name": "tomer-amran-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/TomerAmran/tomer-amran-website.git",
+  "author": "tomera <tomera@wix.com>",
+  "license": "MIT",
+  "workspaces":[
+    "packages/*"
+  ],
+  "private":"true"
+}
