@@ -1,9 +1,13 @@
 const React = require('react')
 
-const App = ()=>{
+const App = () => {
+    const [count, setCount] = React.useState(0)
     return (
-        <button onClick={()=> consoel.log('button clicked')}>click me</button>
+        <div>   
+            <h1>{count}</h1>
+            <button onClick={()=> setCount(count+1)}>click me</button>
+        </div>
     )
 }
 
-module.exports = App
+export default App;
