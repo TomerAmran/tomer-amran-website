@@ -1,9 +1,12 @@
 const React = require('react')
 const App = () => {
     const [count, setCount] = React.useState(0)
+    const random = ()=> {
+        return Math.floor(Math.random() * 1000)
+    }
     const hearts = Array(count).fill(1).map((_)=>{
+        return (<div style={{position:"absolute",left:`${random()}px`,top:`${random()}px`}}>&#10084;&#65039;</div>)
 
-        return (<div>&#10084;&#65039;</div>)
     }
     )
     console.log(hearts)
@@ -12,7 +15,7 @@ const App = () => {
             <div>
                 Click the button and love Niva.
                 </div>
-            <button onClick={()=> setCount(count+1)}>click me</button>
+            <button onClick={()=> setCount(count+20)}>click me</button>
             {hearts}
         </div>
     )
