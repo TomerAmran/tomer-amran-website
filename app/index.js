@@ -1,7 +1,4 @@
-const root = document.getElementById("root");
-const newButton = document.createElement("button");
-newButton.innerHTML = "click me";
-newButton.addEventListener("click", () => console.log("button clicked"));
-setTimeout(() => {
-  root.appendChild(newButton);
-}, 1000);
+const ReactDom = require("react-dom/client");
+const App = require("./app.jsx");
+const root = ReactDom.createRoot(document.getElementById("root"));
+root.render(App);

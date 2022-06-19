@@ -10,9 +10,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/js", (req, res) => {
-  res.sendFile(path.join(__dirname, "../app/index.js"));
+  console.log(path.join(__dirname, "../dist/bundle.js"));
+  res.sendFile(path.join(__dirname, "../dist/bundle.js"));
 });
 
-app.listen(3000, () => {
-  console.log("server started on port 3000");
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
 });
