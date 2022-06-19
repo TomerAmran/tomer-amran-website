@@ -1,6 +1,6 @@
 module.exports = {
   mode: "production",
-  entry: ["./app/index.js", "./app/index.html"],
+  entry: "./app/index.js",
   output: {
     path: __dirname + "/dist",
     filename: "bundle.js",
