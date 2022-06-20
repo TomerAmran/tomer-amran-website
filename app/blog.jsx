@@ -1,7 +1,7 @@
 const axios = require('axios')
 const { useEffect } = require('react')
 const React = require('react')
-const SERVER_URL = 'http://localhost:3000'
+const SERVER_URL = `${window.location.href}`
 
 const Blog = ()=>{
     const [posts, setPosts] = React.useState([])
