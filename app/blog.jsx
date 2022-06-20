@@ -3,7 +3,7 @@ const { useEffect } = require("react");
 const React = require("react");
 const SERVER_URL = "http://tomeramran.com";
 // const SERVER_URL = "http://localhost:3000";
-
+let fetchInterval;
 const Blog = () => {
   const [posts, setPosts] = React.useState([]);
   const fetchPosts = () => {
@@ -23,6 +23,14 @@ const Blog = () => {
   };
 
   useEffect(fetchPosts, []);
+  if (
+    fetchInterval &&
+    fetchInterval != undefined &&
+    fetchInterval != "undefined"
+  ) {
+    window.clearInterval(fetchInterval);
+  }
+  fetchInterval = setInterval(fetchPosts, 1000);
   return (
     <div>
       <h1>Blog</h1>
