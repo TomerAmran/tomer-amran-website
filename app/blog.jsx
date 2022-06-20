@@ -1,8 +1,8 @@
 const axios = require("axios");
 const { useEffect } = require("react");
 const React = require("react");
-// const SERVER_URL = "http://tomeramran.com";
-const SERVER_URL = "http://localhost:3000";
+const SERVER_URL = "http://tomeramran.com";
+// const SERVER_URL = "http://localhost:3000";
 
 const Blog = () => {
   const [posts, setPosts] = React.useState([]);
