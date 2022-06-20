@@ -14,6 +14,13 @@ app.get("/js", (req, res) => {
   res.sendFile(path.join(__dirname, "../dist/bundle.js"));
 });
 
+
+
+
+app.get("/post", (req,res)=>{
+
+})
+
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
