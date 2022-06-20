@@ -43,7 +43,7 @@ const Blog = () => {
         <input type="submit" value="Add Post" />
       </form>
 
-      {posts.map((post) => (
+      {posts.reverse().map((post) => (
         <div>
           <h2>{post.title}</h2>
           <h5>{post.author}</h5>
